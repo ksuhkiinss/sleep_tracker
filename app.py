@@ -5,20 +5,20 @@ from datetime import datetime
 # ========================
 # Перевірка cookies / сесії
 # ========================
-from streamlit_cookies_manager import EncryptedCookieManager
+#from streamlit_cookies_manager import EncryptedCookieManager
 
-cookies = EncryptedCookieManager(
-    prefix="sleep_app",
-    password="super_secret_password"
-)
-if not cookies.ready():
-    st.stop()
+#cookies = EncryptedCookieManager(
+#    prefix="sleep_app",
+#    password="super_secret_password"
+#)
+#if not cookies.ready():
+#    st.stop()
 
 # Відновлюємо сесію з cookies
-if "user_id" not in st.session_state:
-    if "user_id" in cookies:
-        st.session_state["user_id"] = int(cookies["user_id"])
-        st.session_state["username"] = cookies.get("username")
+#if "user_id" not in st.session_state:
+#    if "user_id" in cookies:
+#        st.session_state["user_id"] = int(cookies["user_id"])
+#        st.session_state["username"] = cookies.get("username")
 
 # ========================
 # Заголовок
